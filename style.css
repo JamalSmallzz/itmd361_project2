@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+figure {
+  text-align: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+figcaption {
+  font-style: italic;
+  color: black;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+video {
+  display: block;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+header p {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  background-color: #ccc;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  display: block;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.4rem;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: pink;
+}
+
+a.resumeDownload {
+  font-size: 1.4rem;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+.contactMe {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.contactMe p {
+  font-size: 1.3rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: black;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 40px;
+  background: white;
+  box-shadow: 0 0 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+header {
+  text-align: center;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.resume {
+  background-color: #DCDCDC;
+  font-family: 'Times New Roman', Times, serif;
+  color: black;
+}
+
+.resume section > ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.resume section h1:not(.myName),
+.resume section h2,
+.resume section h3,
+.resume section p {
+  text-align: left;
+}
+
+.myName{
+  font-size: 3rem;
+}
+
+.hobbies {
+  background-color: #79cdcd;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+.hobbies section figcaption {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.hobbies section ul,
+.hobbies section p {
+  font-size: 1.2rem;
+}
+
+.index {
+  background-color: #9bcd9b;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+}
+
+.index section figcaption,
+.index section p {
+  font-size: 1.3rem;
+}
