@@ -35,7 +35,7 @@ header p {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
   font-size: 1rem;
   background-color: #ccc;
   line-height: 1.6;
