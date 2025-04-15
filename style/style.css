@@ -170,3 +170,25 @@ header {
 .index section p {
   font-size: 1.3rem;
 }
+
+@media (min-width: 480px) {
+  body.hobbies {
+    background-color: #ADD8E6;
+  }
+
+  .hobbies section img {
+    width: 80%;
+  }
+
+  .hobbies section {
+    padding: 20px;
+  }
+
+  .hobbies h2 {
+    font-size: 1.5rem;
+  }
+
+  .hobbies ul {
+    font-size: 1rem;
+  }
+}
