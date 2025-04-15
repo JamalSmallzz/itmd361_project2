@@ -172,9 +172,6 @@ header {
 }
 
 @media (min-width: 480px) {
-  body.hobbies {
-    background-color:rgb(134, 140, 224);
-  }
 
   .hobbies section img {
     width: 80%;
@@ -194,25 +191,22 @@ header {
 }
 
 @media (min-width: 768px) {
-  body.hobbies {
-    background-color:rgb(111, 160, 160);
-  }
 
-  .hobbies section {
+  body.hobbies section:not(:first-of-type) {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  .hobbies section img {
+  body.hobbies section img {
     width: 400px;
   }
 
-  .hobbies h2 {
+  body.hobbies h2 {
     font-size: 2rem;
   }
 
-  .hobbies ul {
+  body.hobbies ul {
     font-size: 1.3rem;
   }
 }
