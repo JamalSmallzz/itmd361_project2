@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <title>Hobbies</title>
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/style.css">
-  <title>Hobbies</title>
   <style>
     .slider-container {
       max-width: 800px;
       margin: auto;
-      position: relative;
       background: white;
       border-radius: 10px;
       overflow: hidden;
@@ -17,12 +16,7 @@
     }
 
     .slide {
-      display: none;
       padding: 30px;
-    }
-
-    .slide.active {
-      display: block;
     }
 
     .slider-buttons {
@@ -52,67 +46,10 @@
 
   <header>
     <h1>Hobbies!</h1>
-    <p>My personal hobbies page, where I talk about old tech, modding, retro games and other things I'm interested in!</p>
+    <p>This page lists some of my favorite hobbies.</p>
   </header>
 
-  <div class="slider-container">
-    <section class="slide active">
-      <h2>Old Technology</h2>
-      <p>I have always liked fixing and messing with older technologies...</p>
-      <figure>
-        <img src="images/thinkpad.webp" width="400" alt="IBM ThinkPad">
-        <figcaption>IBM ThinkPad</figcaption>
-      </figure>
-      <ul>
-        <li><strong>Grail Technology:</strong> IBM ThinkPads(T530)</li>
-        <li><strong>Why I Want one:</strong> The durability, modularity, and customizability.</li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h2>Modding</h2>
-      <p>Modding is one of my favorite hobbies...</p>
-      <figure>
-        <img src="images/seaglass.jpg" width="400" alt="ROM">
-        <figcaption>My Favorite Rom</figcaption>
-      </figure>
-      <ul>
-        <li><strong>Types of Modding I Enjoy:</strong> Game modding, hardware tweaks, custom ROMs.</li>
-        <li><strong>Recent Projects:</strong> Capture card, Pokemon Yellow ROM.</li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h2>One Piece</h2>
-      <p>I'm a huge fan of <strong>One Piece</strong>...</p>
-      <figure>
-        <img src="images/blackbeard.webp" width="400" alt="One Piece">
-        <figcaption>My Favorite Panel</figcaption>
-      </figure>
-      <ul>
-        <li><strong>Favorite Characters:</strong> Luffy, Chopper, Sanji, Robin</li>
-        <li><strong>Best Arcs:</strong> Marineford, Wano, Skypiea, Egghead</li>
-      </ul>
-    </section>
-
-    <section class="slide">
-      <h2>Retro Games</h2>
-      <p>I really like RPGs, platformers, and story driven games...</p>
-      <figure>
-        <img src="images/dragonite.png" width="400" alt="Dragonite">
-        <figcaption>My Favorite Pokemon</figcaption>
-      </figure>
-      <ul>
-        <li><strong>Favorite Games:</strong> Mario 64, Zelda, Metal Gear Solid</li>
-        <li><strong>Why I Like Retro:</strong> Pixel art, creative gameplay, strong writing.</li>
-      </ul>
-    </section>
-
-    <div class="slider-buttons">
-      <button id="prevBtn">Previous</button>
-      <button id="nextBtn">Next</button>
-    </div>
-  </div>
+  <div id="slideshow" class="slider-container"></div>
 
   <script src="js/main.js" defer></script>
 </body>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,32 @@
   <title>Welcome</title>
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/style.css">
+  <style>
+    .slider-container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #333;
+    }
+
+    .slide {
+      padding: 30px;
+    }
+
+    .slider-buttons {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .slider-buttons button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body class="index">
@@ -20,47 +47,10 @@
 
   <header>
     <h1>Welcome to My Homepage</h1>
-    <p>I decided to use this page to list my favorite restaurants. These are places I think have really good food.</p>
+    <p>Here are my favorite restaurants.</p>
   </header>
 
-  <section>
-    <h2>Favorite Restaurants</h2>
-
-    <figure>
-      <img src="images/mdkhan.jpg" alt="Mdakhan">
-      <figcaption><strong>Mdakhan:</strong> A Palestinian restaurant specializing in smoked food.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/baw.jpg" alt="Bawadi">
-      <figcaption><strong>Bawadi:</strong> Bedouin-themed restaurant with traditional tents and Mensaf.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/moti.webp" alt="Moti Cafe">
-      <figcaption><strong>Moti Cafe:</strong> Known for great Indian street food. Tikka masala is a favorite.</figcaption>
-    </figure>
-
-    <figure>
-      <img src="images/albasha.jpeg" alt="AlBasha">
-      <figcaption><strong>Albasha:</strong> Jordanian cuisine with excellent hummus and shawarma.</figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <h2>My Favorite Dish</h2>
-    <p><strong>Maqluba</strong>: A delicious upside-down rice dish with chicken, eggplant, and potatoes.</p>
-
-    <h2>Flipping Maqluba</h2>
-    <video controls muted>
-      <source src="images/maql.mp4" type="video/mp4">
-    </video>
-    <p>Watch how Maqluba is made!</p>
-  </section>
-
-  <section>
-    <button id="changeColorBtn">Change Background Color</button>
-  </section>
+  <div id="slideshow" class="slider-container"></div>
 
   <script src="js/main.js" defer></script>
 </body>
