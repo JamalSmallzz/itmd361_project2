@@ -12,57 +12,59 @@ document.addEventListener("DOMContentLoaded", () => {
   const slidesDataIndex = [
     {
       title: "Mdakhan",
-      content: `<img src="images/mdkhan.jpg" alt="Mdakhan">
-                <figcaption>A Palestinian restaurant specializing in smoked food.</figcaption>`
+      paragraph: "",
+      image: "images/mdkhan.jpg",
+      caption: "A Palestinian restaurant specializing in smoked food."
     },
     {
       title: "Bawadi",
-      content: `<img src="images/baw.jpg" alt="Bawadi">
-                <figcaption>Bedouin-themed restaurant with traditional tents and Mensaf.</figcaption>`
+      paragraph: "",
+      image: "images/baw.jpg",
+      caption: "Bedouin-themed restaurant with traditional tents and Mensaf."
     },
     {
       title: "Moti Cafe",
-      content: `<img src="images/moti.webp" alt="Moti Cafe">
-                <figcaption>Indian street food. Tikka masala is a favorite.</figcaption>`
+      paragraph: "",
+      image: "images/moti.webp",
+      caption: "Indian street food. Tikka masala is a favorite."
     },
     {
       title: "Albasha",
-      content: `<img src="images/albasha.jpeg" alt="AlBasha">
-                <figcaption>Jordanian cuisine with excellent hummus and shawarma.</figcaption>`
+      paragraph: "",
+      image: "images/albasha.jpeg",
+      caption: "Jordanian cuisine with excellent hummus and shawarma."
     },
     {
       title: "Maqluba",
-      content: `<p>Upside-down rice dish with chicken, eggplant, and potatoes.</p>
-                <video controls muted>
-                  <source src="images/maql.mp4" type="video/mp4">
-                </video>`
+      paragraph: "Upside-down rice dish with chicken, eggplant, and potatoes.",
+      video: "images/maql.mp4"
     }
   ];
 
   const slidesDataHobbies = [
     {
       title: "Old Technology",
-      content: `<p>I love fixing old tech. First thing I ever fixed: my dad's walkman.</p>
-                <img src="images/thinkpad.webp" alt="IBM ThinkPad">
-                <figcaption>IBM ThinkPad T530</figcaption>`
+      paragraph: "I love fixing old tech. First thing I ever fixed: my dad's walkman.",
+      image: "images/thinkpad.webp",
+      caption: "IBM ThinkPad T530"
     },
     {
       title: "Modding",
-      content: `<p>Modding lets me enhance games and hardware beyond their original limits.</p>
-                <img src="images/seaglass.jpg" alt="ROM">
-                <figcaption>My favorite ROM</figcaption>`
+      paragraph: "Modding lets me enhance games and hardware beyond their original limits.",
+      image: "images/seaglass.jpg",
+      caption: "My favorite ROM"
     },
     {
       title: "One Piece",
-      content: `<p>One Piece is full of freedom, revolution, and justice. I love the themes and characters.</p>
-                <img src="images/blackbeard.webp" alt="One Piece">
-                <figcaption>My favorite panel</figcaption>`
+      paragraph: "One Piece is full of freedom, revolution, and justice. I love the themes and characters.",
+      image: "images/blackbeard.webp",
+      caption: "My favorite panel"
     },
     {
       title: "Retro Games",
-      content: `<p>I play retro RPGs, platformers, and story-driven games. Favorite: Warioland.</p>
-                <img src="images/dragonite.png" alt="Dragonite">
-                <figcaption>My favorite Pokémon</figcaption>`
+      paragraph: "I play retro RPGs, platformers, and story-driven games. Favorite: Warioland.",
+      image: "images/dragonite.png",
+      caption: "My favorite Pokémon"
     }
   ];
 
@@ -84,9 +86,26 @@ document.addEventListener("DOMContentLoaded", () => {
     container.appendChild(buttons);
 
     let currentSlide = 0;
+
     function showSlide(index) {
       const slide = slidesData[index];
-      slideEl.innerHTML = `<h2>${slide.title}</h2><div>${slide.content}</div>`;
+      let html = `<h2>${slide.title}</h2>`;
+
+      if (slide.paragraph) {
+        html += `<p>${slide.paragraph}</p>`;
+      }
+
+      if (slide.image && slide.caption) {
+        html += `<figure><img src="${slide.image}" alt="${slide.title}"><figcaption>${slide.caption}</figcaption></figure>`;
+      } else if (slide.image) {
+        html += `<img src="${slide.image}" alt="${slide.title}">`;
+      }
+
+      if (slide.video) {
+        html += `<video controls muted><source src="${slide.video}" type="video/mp4"></video>`;
+      }
+
+      slideEl.innerHTML = html;
     }
 
     document.getElementById("prevBtn").addEventListener("click", () => {
