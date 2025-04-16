@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Al's Beef Locations</title>
+  <link rel="stylesheet" href="style/reset.css">
+  <link rel="stylesheet" href="style/style.css">
+  <style>
+    body.map {
+      background-color: #d0e7f9; /* chicago blue */
+      font-family: sans-serif;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #003f7f;
+    }
+
+    header {
+      margin: 2rem 0 1rem;
+    }
+
+    #map {
+      height: 500px;
+      width: 90%;
+      max-width: 800px;
+      margin: 0 auto 2rem;
+      border: 2px solid #003f7f;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body class="map">
+  <section>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="map.html">Map</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <header>
+    <h1>All the Al's Beef Locations in Chicago</h1>
+    <p>I really like Al's Beef. Here are all their locations.</p>
+  </header>
+
+  <div id="map"></div>
+
+  <script>
+    function initMap() {
+      const locations = [
+        { lat: 41.8695, lng: -87.6513, title: "Al's Beef - Taylor St" },
+        { lat: 41.8915, lng: -87.6346, title: "Al's Beef - Wells St" },
+        { lat: 41.9458, lng: -87.6542, title: "Al's Beef - Clark St" },
+        { lat: 41.9310, lng: -87.6880, title: "Al's Beef - Western Ave" },
+        { lat: 41.5564, lng: -87.7832, title: "Al's Beef - Tinley Park" },
+        { lat: 42.0411, lng: -87.7749, title: "Al's Beef - Morton Grove" },
+        { lat: 42.0411, lng: -87.8270, title: "Al's Beef - Niles" }
+      ];
+
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 41.8781, lng: -87.6298 },
+        zoom: 11,
+        mapTypeControl: true,
+        zoomControl: true,
+        streetViewControl: false,
+      });
+
+      locations.forEach((location) => {
+        const marker = new google.maps.Marker({
+          position: { lat: location.lat, lng: location.lng },
+          map: map,
+          title: location.title,
+          animation: google.maps.Animation.DROP,
+        });
+
+        const infoWindow = new google.maps.InfoWindow({
+          content: `<strong>${location.title}</strong>`,
+        });
+
+        marker.addListener("click", () => {
+          infoWindow.open(map, marker);
+        });
+      });
+    }
+  </script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjZhHKLRs2_kOePGq8fzGPI0rLPZNfmBo&callback=initMap" defer></script>
+</body>
+</html>
